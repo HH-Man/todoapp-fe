@@ -1,4 +1,5 @@
 import {Todo} from '../todo';
+import {Prio} from '../prio';
 import {TodoService} from '../todo.service';
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
@@ -14,7 +15,7 @@ export class TodoListComponent implements OnInit {
   newTodo: Todo = new Todo();
   editing = false;
   editingTodo: Todo = new Todo();
-
+  prio: Prio;
 
   constructor(private todoService: TodoService) {}
 

@@ -92,7 +92,15 @@ input {
 }
 
 .todo-content .todo-title {
-  width: calc(100% - 160px);
+  /* width: calc(100% - 200px); */
+  width: 60%;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-content .todo-prio {
+  width: 15%;
   margin-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -131,7 +139,12 @@ input {
 }
 
 .todo-content .todo-edit input{
-  width: calc(100% - 80px);
+  width: 70%;
+  height: 35px;
+}
+
+.todo-content .todo-edit select{
+  width: 15%;
   height: 35px;
 }
 
