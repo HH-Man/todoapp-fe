@@ -71,4 +71,11 @@ export class TodoListComponent implements OnInit {
     this.editing = false;
   }
 
+  moveUpTodo(todo: Todo): void {
+    
+  }
+  
+  moveDownTodo(todo: Todo): void {
+    
+  }
 }
