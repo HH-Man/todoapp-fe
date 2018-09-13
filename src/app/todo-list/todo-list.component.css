@@ -172,3 +172,15 @@ li.completed .todo-title {
 li.completed i {
   color: #757575;
 }
+
+.background-red{
+	background-color: #ff9090;
+}
+
+.background-yellow{
+	background-color: #ffff90;
+}
+
+.background-green{
+	background-color: #90ff90;
+}

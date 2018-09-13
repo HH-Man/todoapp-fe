@@ -10,4 +10,16 @@ export class Todo {
   constructor() {
     this.prio = 'MEDIUM';
   }
+
+  isPrioHigh(): boolean {
+    return this.prio === 'HIGH';
+  }
+
+  isPrioMedium(): boolean {
+    return this.prio === 'MEDIUM';
+  }
+
+  isPrioLow(): boolean {
+    return this.prio === 'LOW';
+  }
 }

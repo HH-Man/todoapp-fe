@@ -13,7 +13,11 @@
 	<ul class="todo-list">
 		<li *ngFor="let todo of todos"
 			[class.completed]="todo.completed === true">
-			<div class="todo-row" *ngIf="!editing || editingTodo.id != todo.id">
+			<div class="todo-row"
+				[ngClass]="{'background-red': todo.prio === 'HIGH', 
+							'background-yellow': todo.prio === 'MEDIUM',
+							'background-green': todo.prio === 'LOW'}" 
+				*ngIf="!editing || editingTodo.id != todo.id">
 				<a class="todo-completed" (click)="toggleCompleted(todo)"> 
 					<i class="material-icons toggle-completed-checkbox"></i>
 				</a> 
