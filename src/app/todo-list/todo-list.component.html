@@ -11,7 +11,7 @@
 		</form>
 	</div>
 	<ul class="todo-list">
-		<li *ngFor="let todo of todos; index as i; first as isFirst; last as isLast"
+		<li *ngFor="let todo of todos; index as i; first as isFirst; last as isLast; trackBy: trackById"
 			[class.completed]="todo.completed === true">
 			<div class="todo-row"
 				[ngClass]="{'background-red': todo.prio === 'HIGH', 
@@ -26,10 +26,10 @@
 				<!-- <span>{{i}}</span> -->
 				<span
 					class="todo-actions"> 
-					<a *ngIf="! isFirst" (click)="moveUpTodo(todo) "> 
+					<a *ngIf="! isFirst" (click)="moveUpTodo(i) "> 
 						<i class="material-icons">arrow_upward</i>
 					</a> 
-					<a *ngIf="! isLast" (click)="moveDownTodo(todo)"> 
+					<a *ngIf="! isLast" (click)="moveDownTodo(i)"> 
 						<i class="material-icons">arrow_downward</i>
 					</a> 
 					<a (click)="editTodo(todo)"> 

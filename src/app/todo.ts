@@ -22,4 +22,8 @@ export class Todo {
   isPrioLow(): boolean {
     return this.prio === 'LOW';
   }
+
+  trackById(index, item) {
+    return item.title;
+  }
 }

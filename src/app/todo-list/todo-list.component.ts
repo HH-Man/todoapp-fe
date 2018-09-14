@@ -71,11 +71,15 @@ export class TodoListComponent implements OnInit {
     this.editing = false;
   }
 
-  moveUpTodo(todo: Todo): void {
-    
+  moveUpTodo(index: number): void {
+    const temp = this.todos[index - 1];
+    this.todos[index - 1] = this.todos[index];
+    this.todos[index] = temp;
   }
-  
-  moveDownTodo(todo: Todo): void {
-    
+
+  moveDownTodo(index: number): void {
+    const temp = this.todos[index + 1];
+    this.todos[index + 1] = this.todos[index];
+    this.todos[index] = temp;
   }
 }
